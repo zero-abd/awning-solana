@@ -1,7 +1,15 @@
 # Awning on Solana
 
-Awning rebuilt from scratch on Solana: say what could go wrong, get paid when it does. Cover is priced
-from live Gemini prediction markets and bought by an AI agent whose limits a Solana program enforces.
+> "If Michigan loses to Villanova tonight, my Ann Arbor sports bar is out $500."
+>
+> **Pays $500 if Villanova wins. Costs $212.00.**
+>
+> Priced from Gemini's Michigan vs Villanova market on 21 November 2026 (Villanova at 40¢ a contract),
+> plus the pool's 6% margin. The app's sentence parser quotes weather days today; game days are priced
+> the same way.
+
+Say what could go wrong, get paid when it does. Cover is priced from live Gemini prediction markets and
+bought by an AI agent whose limits a Solana program enforces.
 
 - `programs/awning`: Anchor 0.31 program. A pool locks the whole payout before the owner pays anything;
   a mandate caps the agent per cover, per day and per payout; the pool's quoter key co-signs every
