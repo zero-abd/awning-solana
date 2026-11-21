@@ -1,0 +1,19 @@
+[toolchain]
+anchor_version = "0.31.1"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+awning = "GCiXjWdKPbLSq7NLpDkjyVmiLcx9tmYG3oHNTS5Ese12"
+
+[programs.devnet]
+awning = "GCiXjWdKPbLSq7NLpDkjyVmiLcx9tmYG3oHNTS5Ese12"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo test -p awning"
