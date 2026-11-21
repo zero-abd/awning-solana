@@ -38,6 +38,8 @@ Cover for a small business's bad days, priced from live Gemini prediction market
 - [Tests](#tests)
 - [Run it locally](#run-it-locally)
 - [What is real and what is not yet](#what-is-real-and-what-is-not-yet)
+- [Who it's for](#who-its-for)
+- [What comes next](#what-comes-next)
 - [Repository layout](#repository-layout)
 
 ## Why
@@ -294,6 +296,30 @@ turns off buying. It never fakes a chain result.
 
 The hijack test's "buy after revoke" case simulates the revoke and the buy in one transaction, so the
 demo mandate is never actually left revoked.
+
+## Who it's for
+
+Example businesses and the bad days they could cover (illustrations, not customers):
+
+| Business | Bad day | Market it maps to |
+| --- | --- | --- |
+| 🍺 Sports bar | The home team loses on a big game night | Gemini game result |
+| ☕ Coffee cart | A cold, empty morning downtown | Gemini daily high temperature |
+| 🏗️ Roofing crew | A heat wave stops work | Gemini daily high temperature |
+| 🍦 Ice cream stand | A cool weekend | Gemini daily high temperature |
+| 🚚 Delivery fleet | Fuel spikes | Gemini oil and gas prices |
+| 🛍️ Crypto-paid shop | SOL drops before payroll | Gemini crypto prices |
+
+## What comes next
+
+The plan from here (none of this is built yet):
+
+1. **Every sentence, not just weather.** Read game, fuel and crypto days with a language model, matched to Gemini's sports, energy and crypto markets.
+2. **Settlement on its own.** A resolver that watches Gemini's results and calls `settle_cover` the moment a market resolves.
+3. **A hedged pool.** Lay each cover's risk off on Gemini, so the pool never carries a bet it can't pay.
+4. **Devnet, then mainnet.** Real USDC, an audited program, and owner wallets (Phantom, Solflare) instead of server-held demo keys.
+5. **An agent that keeps you covered.** Daily cover bought on its own judgement inside the same on-chain limits, with Solana Actions so an owner can approve it from a link.
+6. **Pool shares.** Let anyone fund the pool and earn the premiums, with the locked-payout rule protecting every cover.
 
 ## Repository layout
 
