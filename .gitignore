@@ -1,0 +1,8 @@
+target
+node_modules
+.keys
+app/.keys
+test-ledger
+.env
+# Program and wallet keypairs never go in git; generate your own (see README).
+*keypair*.json
