@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Awning — cover for bad days</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true"></span>Awning</div>
+  <div class="top-right">
+    <span id="status" class="pill" title="Cluster status">checking…</span>
+    <button id="theme" class="icon-btn" type="button" aria-label="Toggle dark mode">◐</button>
+  </div>
+</header>
+<div id="banner" class="banner" hidden></div>
+<main>
+  <section class="hero">
+    <h1>Awning pays you when a bad day hits your business.</h1>
+    <p class="sub">Say it in one sentence. We find the live prediction market that pays when it happens, and your agent buys cover inside limits a Solana program enforces.</p>
+    <form id="ask" class="ask">
+      <label for="sentence" class="ask-label">Say what could go wrong</label>
+      <div class="ask-row">
+        <input id="sentence" name="sentence" autocomplete="off" maxlength="400" placeholder="If Chicago's high stays under 46 tomorrow my coffee cart is out $300">
+        <button class="btn primary" type="submit">Quote cover</button>
+      </div>
+    </form>
+    <div id="quote" class="quote-slot" aria-live="polite"></div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>Bad days, priced live</h2><span class="muted" id="ex-meta"></span></div>
+    <div id="examples" class="cards"><div class="card skeleton"></div><div class="card skeleton"></div><div class="card skeleton"></div></div>
+  </section>
+
+  <section class="two">
+    <div class="panel">
+      <div class="sec-head"><h2>My agent</h2><span class="muted">limits live on-chain</span></div>
+      <div id="agent">Loading…</div>
+    </div>
+    <div class="panel">
+      <div class="sec-head"><h2>Hijack test</h2><span class="muted">the agent tries to cheat</span></div>
+      <p class="muted small">Using the agent's own key, we try to drain the budget, overspend, buy after revoke, and skip the quoter. Each attempt is simulated against the deployed program.</p>
+      <button id="hijack" class="btn" type="button">Run hijack test</button>
+      <div id="hijack-out"></div>
+    </div>
+  </section>
+</main>
+<footer class="foot muted small">Prices are live Gemini YES asks plus a 6% margin. Quotes are good for 5 minutes.</footer>
+<script type="module" src="/app.js"></script>
+</body>
+</html>
